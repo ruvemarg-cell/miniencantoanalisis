@@ -1,0 +1,77 @@
+import { MonthlyArchiveRecord } from '@/types';
+import { mockMonthlyProducts } from './mockProducts';
+
+export const mockMonthlyArchives: MonthlyArchiveRecord[] = [
+  {
+    monthId: '2026-09',
+    monthName: 'Septiembre 2026',
+    closedDate: '30 de Septiembre de 2026',
+    archivedAt: '2026-10-01T05:00:00-03:00',
+    status: 'CERRADO_COMPLETO',
+    productsCount: 30,
+    dataSource: 'Archivo Histórico Consolidado E-commerce Argentina MLA',
+    methodologyNote: 'Cierre definitivo de mes calendario tras consolidación de despachos y auditoría de cancelaciones.',
+    topProducts: mockMonthlyProducts.map((p) => ({
+      ...p,
+      unitsSold: Math.round(p.unitsSold * 0.95),
+      estimatedRevenueARS: Math.round(p.estimatedRevenueARS * 0.93),
+    })),
+    topCategories: [
+      { name: 'Hogar y Cocina', unitsSold: 41200, revenueARS: 914000000 },
+      { name: 'Tecnología y Gadgets', unitsSold: 38400, revenueARS: 765000000 },
+      { name: 'Belleza y Cuidado Personal', unitsSold: 25100, revenueARS: 512000000 },
+      { name: 'Organización y Hogar', unitsSold: 18900, revenueARS: 351000000 },
+      { name: 'Deportes y Aire Libre', unitsSold: 15400, revenueARS: 308000000 },
+      { name: 'Salud y Bienestar', unitsSold: 4100, revenueARS: 143000000 },
+      { name: 'Moda y Accesorios', unitsSold: 3500, revenueARS: 68000000 },
+    ],
+  },
+  {
+    monthId: '2026-08',
+    monthName: 'Agosto 2026',
+    closedDate: '31 de Agosto de 2026',
+    archivedAt: '2026-09-01T05:00:00-03:00',
+    status: 'CERRADO_COMPLETO',
+    productsCount: 30,
+    dataSource: 'Archivo Histórico Consolidado E-commerce Argentina MLA',
+    methodologyNote: 'Incluye impacto completo del Día de las Infancias (Día del Niño).',
+    topProducts: mockMonthlyProducts.map((p) => ({
+      ...p,
+      unitsSold: Math.round(p.unitsSold * 0.88),
+      estimatedRevenueARS: Math.round(p.estimatedRevenueARS * 0.85),
+    })),
+    topCategories: [
+      { name: 'Tecnología y Gadgets', unitsSold: 42100, revenueARS: 835000000 },
+      { name: 'Hogar y Cocina', unitsSold: 37600, revenueARS: 830000000 },
+      { name: 'Belleza y Cuidado Personal', unitsSold: 22800, revenueARS: 465000000 },
+      { name: 'Organización y Hogar', unitsSold: 17200, revenueARS: 320000000 },
+      { name: 'Deportes y Aire Libre', unitsSold: 13900, revenueARS: 278000000 },
+      { name: 'Salud y Bienestar', unitsSold: 3800, revenueARS: 132000000 },
+      { name: 'Moda y Accesorios', unitsSold: 3100, revenueARS: 60000000 },
+    ],
+  },
+  {
+    monthId: '2026-07',
+    monthName: 'Julio 2026',
+    closedDate: '31 de Julio de 2026',
+    archivedAt: '2026-08-01T05:00:00-03:00',
+    status: 'CERRADO_COMPLETO',
+    productsCount: 30,
+    dataSource: 'Archivo Histórico Consolidado E-commerce Argentina MLA',
+    methodologyNote: 'Cierre regular de período invernal y vacaciones de invierno.',
+    topProducts: mockMonthlyProducts.map((p) => ({
+      ...p,
+      unitsSold: Math.round(p.unitsSold * 0.82),
+      estimatedRevenueARS: Math.round(p.estimatedRevenueARS * 0.79),
+    })),
+    topCategories: [
+      { name: 'Hogar y Cocina', unitsSold: 39100, revenueARS: 850000000 },
+      { name: 'Tecnología y Gadgets', unitsSold: 35200, revenueARS: 698000000 },
+      { name: 'Belleza y Cuidado Personal', unitsSold: 21400, revenueARS: 432000000 },
+      { name: 'Organización y Hogar', unitsSold: 16100, revenueARS: 298000000 },
+      { name: 'Deportes y Aire Libre', unitsSold: 12200, revenueARS: 244000000 },
+      { name: 'Salud y Bienestar', unitsSold: 3500, revenueARS: 122000000 },
+      { name: 'Moda y Accesorios', unitsSold: 2900, revenueARS: 56000000 },
+    ],
+  },
+];
